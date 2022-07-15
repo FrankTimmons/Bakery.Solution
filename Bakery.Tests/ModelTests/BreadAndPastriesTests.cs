@@ -20,5 +20,13 @@ namespace Bakery.Tests
       newBreadOrder.BreadPriceCalc();
       Assert.AreEqual(5, newBreadOrder.Price);
     }
+
+    [TestMethod]
+    public void BreadPriceCalc_MakeEveryThirdBreadFree_Int()
+    {
+      Bread newBreadOrder = new Bread(3);
+      newBreadOrder.BreadPriceCalc();
+      Assert.AreEqual(10, newBreadOrder.Price);
+    }
   }
 }
