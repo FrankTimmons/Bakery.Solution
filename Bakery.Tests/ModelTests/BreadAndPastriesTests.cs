@@ -46,5 +46,13 @@ namespace Bakery.Tests
       newPastryOrder.PastryPriceCalc();
       Assert.AreEqual(2, newPastryOrder.Price);
     }
+
+    [TestMethod]
+    public void PastryPriceCalc_MakeEveryThirdPastryHalfOff_Int()
+    {
+      Pastry newPastryOrder = new Pastry(3);
+      newPastryOrder.PastryPriceCalc();
+      Assert.AreEqual(5, newPastryOrder.Price);
+    }
   }
 }
