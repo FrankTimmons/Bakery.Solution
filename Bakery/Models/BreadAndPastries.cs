@@ -10,7 +10,12 @@ namespace Bakery.Models
 
     public Bread(int amount)
     {
+      BreadAmount = amount;
+    }
 
+    public void BreadPriceCalc()
+    {
+      
     }
   }
 }
