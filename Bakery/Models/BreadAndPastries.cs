@@ -36,6 +36,10 @@ namespace Bakery.Models
     public void PastryPriceCalc()
     {
       Price = PastryAmount * 2;
+      if (PastryAmount % 3 == 0)
+      {
+        Price -= ((Price / 3) / 2); 
+      }
     }
   }
 }
