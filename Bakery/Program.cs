@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
-using Bakery.Models;4
+using Bakery.Models;
 
 namespace Bakery
 {
   public class Program
   {
-    public int Pastries { get; set; }
-    public int Loaves { get; set; } 
+    static int Pastries { get; set; }
+    static int Loaves { get; set; } 
 
     static void Main()
     {
@@ -33,11 +33,11 @@ namespace Bakery
       Pastries = int.Parse(stringPastries);
     }
 
-    static void GetPrice(int loaves, int pastries)
+    static void GetPrice()
     {
-      Bread newBreadOrder = new Bread(loaves);
+      Bread newBreadOrder = new Bread(Loaves);
       newBreadOrder.BreadPriceCalc();
-      Pastry newPastryOrder = new Pastry(pastries);
+      Pastry newPastryOrder = new Pastry(Pastries);
       newPastryOrder.PastryPriceCalc();
       int totalPrice = newBreadOrder.Price + newPastryOrder.Price;
       Console.WriteLine("Your total price is: $" + totalPrice);
