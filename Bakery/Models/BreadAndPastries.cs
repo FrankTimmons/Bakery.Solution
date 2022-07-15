@@ -35,7 +35,7 @@ namespace Bakery.Models
 
     public void PastryPriceCalc()
     {
-      
+      Price = PastryAmount * 2;
     }
   }
 }
