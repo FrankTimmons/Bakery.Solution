@@ -32,5 +32,10 @@ namespace Bakery.Models
     {
       PastryAmount = amount;
     }
+
+    public void PastryPriceCalc()
+    {
+      
+    }
   }
 }
