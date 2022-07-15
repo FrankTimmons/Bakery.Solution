@@ -15,10 +15,16 @@ namespace Bakery.Models
 
     public void BreadPriceCalc()
     {
-      Price = BreadAmount * 5;
-      if (BreadAmount % 3 == 0)
+      for(int i = 1; i <= BreadAmount; i++)
       {
-        Price -= (Price / 3); 
+        if (i % 3 == 0)
+        {
+          Price += 0;
+        }
+        else
+        {
+          Price += 5;
+        }
       }
     }
   }
