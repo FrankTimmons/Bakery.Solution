@@ -41,10 +41,16 @@ namespace Bakery.Models
 
     public void PastryPriceCalc()
     {
-      Price = PastryAmount * 2;
-      if (PastryAmount % 3 == 0)
+      for(int i = 1; i <= PastryAmount; i++)
       {
-        Price -= ((Price / 3) / 2); 
+        if (i % 3 == 0)
+        {
+          Price += 1;
+        }
+        else
+        {
+          Price += 2;
+        }
       }
     }
   }
