@@ -16,6 +16,10 @@ namespace Bakery.Models
     public void BreadPriceCalc()
     {
       Price = BreadAmount * 5;
+      if (BreadAmount % 3 == 0)
+      {
+        Price -= (Price / 3); 
+      }
     }
   }
 }
