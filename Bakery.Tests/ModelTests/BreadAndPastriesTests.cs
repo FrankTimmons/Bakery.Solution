@@ -17,6 +17,7 @@ namespace Bakery.Tests
     public void BreadPriceCalc_MakeBreadCostFiveDollars_Int()
     {
       Bread newBreadOrder = new Bread(1);
+      newBreadOrder.BreadPriceCalc();
       Assert.AreEqual(5, newBreadOrder.Price);
     }
   }

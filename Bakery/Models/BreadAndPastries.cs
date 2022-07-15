@@ -15,7 +15,7 @@ namespace Bakery.Models
 
     public void BreadPriceCalc()
     {
-      
+
     }
   }
 }
